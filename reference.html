@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Med Clinics | Best Hair & Laser Cosmetology Center</title>
+    <meta name="description"
+        content="Regain your confidence with advanced hair transplant, PRP therapy, and laser treatments at Skin Med Clinics. Led by Dr. Sriteja, MD. Book your consultation today!">
+
+    <!-- Preconnect for faster loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF6B00',
+                        secondary: '#0F172A',
+                        'text-gray': '#475569',
+                        'bg-light': '#F8FAFC',
+                        'oil-green': '#0f241d', /* Dark, rich luxury green */
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --nav-height: 90px;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            background-color: #ffffff;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* SLEEK BLACK SHINE BUTTON */
+        .btn-black {
+            background: linear-gradient(135deg, #2b2b2b 0%, #000000 100%);
+            color: #ffffff !important;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 9999px;
+            border: 1px solid #333;
+        }
+
+        .btn-black::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-25deg);
+            transition: all 0.7s ease;
+            z-index: 1;
+        }
+
+        .btn-black:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+        }
+
+        .btn-black:hover::before {
+            left: 200%;
+        }
+
+        .btn-black>* {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* NAVBAR */
+        #main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+            height: var(--nav-height);
+            transition: all 0.3s ease;
+        }
+
+        /* HOVER CARDS */
+        .hover-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* CONTACT FORM STYLE */
+        .input-field {
+            width: 100%;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            background-color: #f8fafc;
+            transition: all 0.3s ease;
+            outline: none;
+            font-size: 14px;
+            color: #0f172a;
+        }
+
+        .input-field:focus {
+            border-color: #000;
+            background-color: #ffffff;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-secondary">
+
+    <!-- ─── NAVBAR ─── -->
+    <nav id="main-nav" class="flex items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center w-full">
+            <a href="#" class="flex items-center gap-2 shrink-0">
+                <img src="logo.png"
+                    onerror="this.style.display='none'; document.getElementById('brand-text').style.display='flex';"
+                    alt="Skin Med Logo"
+                    class="h-16 md:h-20 w-auto object-contain origin-left hover:scale-105 transition-transform duration-300">
+                <span id="brand-text" class="hidden items-center text-xl font-black tracking-tight">
+                    <span class="text-secondary">SKIN</span><span class="text-primary">MED</span>
+                </span>
+            </a>
+
+            <div class="hidden lg:flex space-x-8 items-center text-sm font-bold text-gray-700">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#services" class="hover:text-primary transition-colors">Treatments</a>
+                <a href="#before-after" class="hover:text-primary transition-colors">Results</a>
+                <a href="#testimonials" class="hover:text-primary transition-colors">Reviews</a>
+                <a href="#locations" class="hover:text-primary transition-colors">Clinics</a>
+                <a href="tel:+919391082255" class="btn-black px-7 py-2.5 text-xs">Call Now</a>
+            </div>
+
+            <button id="hamburger-btn" class="lg:hidden text-2xl text-secondary focus:outline-none"
+                aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-white shadow-2xl flex-col items-start px-6 py-6 space-y-4 text-sm font-bold text-secondary border-t border-gray-100 z-50">
+            <a href="#about" class="block w-full hover:text-primary transition" onclick="closeMobileMenu()">About</a>
+            <a href="#services" class="block w-full hover:text-primary transition"
+                onclick="closeMobileMenu()">Treatments</a>
+            <a href="#before-after" class="block w-full hover:text-primary transition"
+                onclick="closeMobileMenu()">Results</a>
+            <a href="#testimonials" class="block w-full hover:text-primary transition"
+                onclick="closeMobileMenu()">Reviews</a>
+            <a href="#locations" class="block w-full hover:text-primary transition"
+                onclick="closeMobileMenu()">Locations</a>
+            <a href="#contact" class="block w-full hover:text-primary transition"
+                onclick="closeMobileMenu()">Contact</a>
+            <a href="tel:+919391082255" class="btn-black px-6 py-3.5 w-full text-center mt-2 text-sm">Call Now</a>
+        </div>
+    </nav>
+
+    <!-- ─── COMPACT HERO SECTION ─── -->
+    <!-- ─── COMPACT HERO SECTION ─── -->
+    <section class="pt-[90px] bg-[#FFF4ED] overflow-hidden" id="hero-section">
+        <!-- Changed lg:py-10 to lg:pt-2 lg:pb-10 to pull the content up closer to the nav -->
+        <div
+            class="container mx-auto px-4 sm:px-6 lg:px-12 flex flex-col lg:flex-row items-center pt-4 pb-10 lg:pt-2 lg:pb-10 gap-8 lg:gap-10">
+
+            <!-- Poster Image -->
+            <div class="w-full lg:w-1/2 order-1 lg:order-2 relative flex justify-center">
+
+                <!-- We moved the border, shadow, and rounded corners to this WRAPPER. -->
+                <!-- overflow-hidden allows us to crop the image safely inside it. -->
+                <div
+                    class="relative w-full max-w-[340px] md:max-w-[380px] lg:max-w-[360px] rounded-[2rem] shadow-[0_15px_40px_rgba(0,0,0,0.15)] border-4 border-white overflow-hidden bg-white">
+
+                    <!-- Notice lg:h-[460px] object-cover object-top. 
+                         This forces the image to cut off the bottom white space on desktop! -->
+                    <img src="hero-transform.jpg" alt="Hair Transformation"
+                        class="w-full h-auto lg:h-[560px] object-cover object-top"
+                        onerror="this.src='https://via.placeholder.com/600x1000/f8fafc/FF6B00?text=Insert+9:16+Poster'">
+
+                    <!-- Overlaid CTA Button (Mobile only) -->
+                    <div class="absolute bottom-6 left-0 w-full px-6 flex justify-center lg:hidden">
+                        <a href="#contact" class="btn-black w-full py-3.5 text-[13px] shadow-2xl">
+                            Book Consultation <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Side -->
+            <div
+                class="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left z-10 flex flex-col items-center lg:items-start">
+
+                <div
+                    class="inline-block bg-orange-100 text-primary font-bold px-4 py-1.5 rounded-full text-xs tracking-widest uppercase mb-5 border border-orange-200">
+                    World Class Dermatology
+                </div>
+
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary leading-tight mb-4 font-serif">
+                    Rediscover Your <br class="hidden lg:block">
+                    <span class="text-primary">Natural Hair.</span>
+                </h1>
+
+                <p class="text-base md:text-lg text-text-gray mb-8 max-w-md leading-relaxed">
+                    From thinning to fuller, healthier hair. Experience real, life-changing results with evidence-based
+                    medical treatments.
+                </p>
+
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex mb-10">
+                    <a href="#contact" class="btn-black px-10 py-4 text-base">
+                        Book Consultation <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Stats directly attached -->
+                <div class="grid grid-cols-3 gap-4 w-full max-w-sm pt-4 lg:pt-0 lg:border-t-0 border-t border-gray-200">
+                    <div>
+                        <p class="text-2xl md:text-3xl font-black text-secondary mb-0.5">25K+</p>
+                        <p class="text-[10px] md:text-xs text-text-gray font-bold uppercase tracking-wider">Happy
+                            Clients</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl md:text-3xl font-black text-secondary mb-0.5">07+</p>
+                        <p class="text-[10px] md:text-xs text-text-gray font-bold uppercase tracking-wider">Years Exp.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-2xl md:text-3xl font-black text-secondary mb-0.5">30+</p>
+                        <p class="text-[10px] md:text-xs text-text-gray font-bold uppercase tracking-wider">Services</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── TRUST BADGES ─── -->
+    <section class="py-8 bg-white border-b border-gray-100 shadow-sm relative z-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange-50 flex items-center justify-center mb-2 md:mb-3">
+                        <i class="fas fa-award text-2xl md:text-3xl text-primary"></i>
+                    </div>
+                    <span class="font-bold text-sm md:text-base text-secondary">ISO Certified</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gray-50 flex items-center justify-center mb-2 md:mb-3 border border-gray-100">
+                        <i class="fas fa-user-md text-2xl md:text-3xl text-secondary"></i>
+                    </div>
+                    <span class="font-bold text-sm md:text-base text-secondary">Expert Doctors</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-orange-50 flex items-center justify-center mb-2 md:mb-3">
+                        <i class="fas fa-microscope text-2xl md:text-3xl text-primary"></i>
+                    </div>
+                    <span class="font-bold text-sm md:text-base text-secondary">Advanced Tech</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 rounded-full bg-gray-50 flex items-center justify-center mb-2 md:mb-3 border border-gray-100">
+                        <i class="fas fa-shield-alt text-2xl md:text-3xl text-secondary"></i>
+                    </div>
+                    <span class="font-bold text-sm md:text-base text-secondary">Safe Procedures</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── ABOUT US (RICH OIL-PAINT GREEN BACKGROUND) ─── -->
+    <section id="about" class="py-16 md:py-24 bg-oil-green">
+        <div class="container mx-auto px-4 md:px-6 flex justify-center">
+
+            <div
+                class="bg-white rounded-[2rem] shadow-2xl p-6 md:p-10 max-w-3xl w-full hover-card flex flex-col md:flex-row items-center gap-6 md:gap-10 relative">
+
+                <!-- Circular Doctor Face Crop -->
+                <div class="relative shrink-0">
+                    <img src="doctor.png" alt="Dr. Sriteja"
+                        class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover object-[75%_20%] shadow-lg border-4 border-white"
+                        onerror="this.src='https://via.placeholder.com/400x400?text=Dr'">
+
+                    <!-- Black 6+ Badge -->
+                    <div
+                        class="absolute -bottom-1 -right-1 bg-black text-white w-14 h-14 rounded-full flex flex-col items-center justify-center shadow-lg border-2 border-white">
+                        <span class="text-xl font-bold leading-none">6+</span>
+                        <span class="text-[9px] font-bold uppercase mt-0.5">Yrs</span>
+                    </div>
+                </div>
+
+                <!-- Small Compact Content -->
+                <div class="text-center md:text-left">
+                    <h2 class="text-2xl md:text-3xl font-extrabold text-secondary font-serif mb-1">Dr. Sriteja</h2>
+                    <h3 class="text-sm font-bold text-primary uppercase tracking-wide mb-3">Chief Dermatologist (MD,
+                        DDVL)</h3>
+
+                    <p class="text-sm text-text-gray mb-4 leading-relaxed">
+                        A renowned expert with a Fellowship from the Dr. Jamuna Pai Institute, Mumbai. Dr. Sriteja
+                        blends clinical expertise with aesthetic vision to deliver world-class, evidence-based results.
+                    </p>
+
+                    <div
+                        class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 mb-6 text-xs font-bold text-secondary">
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-primary"></i>
+                            Personalized Care</span>
+                        <span class="flex items-center gap-1.5"><i class="fas fa-check-circle text-primary"></i>
+                            Cutting-Edge Tech</span>
+                    </div>
+
+                    <a href="#contact" class="btn-black px-6 py-2.5 text-[11px] md:text-xs">Consult Dr. Sriteja</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── SERVICES ─── -->
+    <section id="services" class="py-12 md:py-20 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <span class="text-primary font-bold tracking-widest text-xs mb-2 uppercase block">What We Do</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-secondary font-serif mb-3">Our Specializations</h2>
+                <p class="text-sm text-text-gray max-w-xl mx-auto">Advanced non-surgical and surgical treatments
+                    tailored for perfect results.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+                <!-- Card 1 -->
+                <div class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col">
+                    <img src="service-hair-transplant.png" loading="lazy" class="w-full h-44 object-cover"
+                        alt="Hair Transplant" onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">Hair Transplantation</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Surgical restoration for
+                            pattern baldness. Natural density with advanced FUE techniques.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col">
+                    <img src="service-prp.png" loading="lazy" class="w-full h-44 object-cover" alt="PRP Therapy"
+                        onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">PRP Hair Therapy</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Platelet-rich plasma injections
+                            to stimulate natural hair growth and stop hair fall effectively.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col">
+                    <img src="service-gfc.png" loading="lazy" class="w-full h-44 object-cover" alt="GFC Therapy"
+                        onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">GFC Therapy</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Growth Factor Concentrate
+                            treatment for boosting hair thickness and volume naturally.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col">
+                    <img src="service-qr678.png" loading="lazy" class="w-full h-44 object-cover" alt="QR678 Therapy"
+                        onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">QR678 Therapy</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Advanced hair growth factor
+                            solution designed to significantly reduce hair fall.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col">
+                    <img src="service-mesotherapy.png" loading="lazy" class="w-full h-44 object-cover" alt="Mesotherapy"
+                        onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">Mesotherapy</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Nutrient-rich micro-injections
+                            to nourish follicles, improve circulation, and reverse thinning.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col">
+                    <img src="service-laser.png" loading="lazy" class="w-full h-44 object-cover"
+                        alt="Laser Hair Removal" onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">Laser Hair Removal</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Safe and permanent hair
+                            reduction using USFDA-approved laser technology.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div
+                    class="bg-bg-light rounded-2xl overflow-hidden hover-card border border-gray-100 flex flex-col lg:col-span-3 lg:w-1/3 lg:mx-auto">
+                    <img src="service-oxygen-laser.png" loading="lazy" class="w-full h-44 object-cover"
+                        alt="Oxygen Laser" onerror="this.src='https://via.placeholder.com/500x300'">
+                    <div class="p-5 flex flex-col flex-grow">
+                        <h3 class="text-lg mb-2 font-bold text-secondary">Oxygen Laser Therapy</h3>
+                        <p class="text-xs text-text-gray mb-4 flex-grow leading-relaxed">Revitalize skin with advanced
+                            laser treatment. Deeply hydrates and stimulates collagen.</p>
+                        <a href="#contact"
+                            class="text-secondary font-bold text-xs hover:text-primary transition flex items-center mt-auto">KNOW
+                            MORE <i class="fas fa-arrow-right ml-1.5"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── RESULTS SINGLE IMAGE (BLACK BACKGROUND) ─── -->
+    <section id="before-after" class="py-16 md:py-24 bg-black">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <span class="text-primary font-bold tracking-widest text-xs mb-2 uppercase block">Gallery Art</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white font-serif mb-2">Proven Success</h2>
+                <p class="text-sm text-gray-400">Real patient transformations. 100% genuine results.</p>
+            </div>
+
+            <!-- Replaced grid with the single uploaded poster -->
+            <div class="max-w-sm md:max-w-md mx-auto">
+                <img src="results-poster.jpg" loading="lazy" alt="Hair Treatment Results Wall"
+                    class="w-full h-auto border-4 border-white rounded-xl shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+                    onerror="this.src='https://via.placeholder.com/800x1000?text=Insert+Polaroid+String+Poster+Here'">
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── REVIEWS ─── -->
+    <!-- ─── REVIEWS (ALL 14 REVIEWS IN CAROUSEL) ─── -->
+    <section id="testimonials" class="py-12 md:py-20 bg-white border-y border-gray-100 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <span class="text-primary font-bold tracking-widest text-xs mb-2 uppercase block">Testimonials</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-secondary font-serif mb-2">Patient Stories</h2>
+                <p class="text-sm text-text-gray animate-pulse">Swipe to read more <i
+                        class="fas fa-arrow-right ml-1"></i></p>
+            </div>
+
+            <!-- Horizontal Scroll Carousel Track -->
+            <div class="flex overflow-x-auto hide-scroll gap-4 md:gap-6 pb-8 snap-x snap-mandatory">
+
+                <!-- ORIGINAL REVIEW 1 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Professional and Amazing"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Mohammad Iliyas</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I had a great experience at Skin Med for my hair treatment. The doctors were very professional
+                        and explained the entire process clearly. The results after just a few sessions have been
+                        amazing!"
+                    </p>
+                </div>
+
+                <!-- ORIGINAL REVIEW 2 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Excellent Staff"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Nandhini Karre</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I recently visited Dr. Sriteja Skinmed Guntur branch. Receiving was nice and Dr. Vennela
+                        explained my skin type and my skin issues. Manager Minny explained everything in the clinic and
+                        Therapist Navya is doing a very good session."
+                    </p>
+                </div>
+
+                <!-- ORIGINAL REVIEW 3 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Great GFC Treatment"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Nagesh Darlling</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I recently visited Skinmed Guntur. I have had severe hair fall for the last 6 months... The
+                        receptionist Hasina took my complete details and explained my concern with the doctor. The Dr
+                        suggested GFC sessions..."
+                    </p>
+                </div>
+
+                <!-- ORIGINAL REVIEW 4 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Visible Results for Acne"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Meghana Sri</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "We approached Skin Med at Guntur with a face full of acne. After a few sessions, we got a
+                        visible result and the face also got an even tone. Thanks for Skin Med and the therapists who
+                        are Sravya and some others giving a good approach.. happy to visit!"
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 1 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"No More Harsh Chemicals"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Ananya Sharma</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I’ve tried every salon treatment for my frizzy hair, but the results never lasted. This
+                        clinic’s herbal protein pack worked wonders. It’s been two months, and my hair feels naturally
+                        soft without that 'chemically straightened' look. Highly recommend if you want to avoid toxins!"
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 2 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Best Solution for Hair Fall"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Rajesh Iyer</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I was skeptical about organic treatments for male pattern thinning, but their ayurvedic scalp
+                        therapy and botanical oils have made a visible difference. My hair fall has significantly
+                        reduced, and the scalp feels much healthier. The doctors here actually listen."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 3 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"The Ultimate Champi Experience"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Meera Deshmukh</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "If you miss the traditional oil massages your grandmother gave you, you must visit. Their
+                        cold-pressed therapeutic oils combined with the professional head massage (Champi) is pure
+                        bliss. It’s helped me with both hair texture and stress relief."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 4 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Safe During Pregnancy"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Priyanka Verma</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "Finding safe hair care during pregnancy was tough. I’m so glad I found this clinic. They used
+                        only plant-based extracts and organic cleansers that didn’t have any strong, nauseating chemical
+                        smells. My hair looks shiny and healthy!"
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 5 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Fixed My Persistent Dandruff"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Arjun Kapoor</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I’ve struggled with a flaky scalp for years and used every medicated shampoo available. After
+                        just three sessions of their neem and tea tree scalp detox, the itchiness is gone. It’s great to
+                        see results without using harsh steroids or sulfates."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 6 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Worth Every Rupee"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Kavita Reddy</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "At first, I thought organic meant 'slow results,' but the biotin-rich botanical masks here
+                        proved me wrong. My hair has a natural bounce and shine that I haven't seen in years. The staff
+                        is very professional and doesn't push unnecessary products."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 7 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Great for Post-Color Damage"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Sahil Malhotra</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I ruined my hair with constant bleaching and hair dyes. The organic deep-conditioning treatment
+                        here literally breathed life back into my dead ends. It’s much better than the high-end keratin
+                        treatments I used to get at luxury salons."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 8 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Finally, a Real Organic Clinic"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Sneha Nair</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "Most places claim to be 'natural' but use parabens. This clinic is transparent about their
+                        ingredients. They use things like shikakai, reetha, and hibiscus, and you can actually smell the
+                        freshness. My hair feels lighter and cleaner."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 9 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Excellent Consultation"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Vikram Joshi</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "What I liked most was the detailed hair analysis. They didn't just give me a generic treatment;
+                        they customized an oil blend specifically for my dry scalp. The holistic approach—including diet
+                        tips—is what sets them apart."
+                    </p>
+                </div>
+
+                <!-- NEW REVIEW 10 -->
+                <div
+                    class="bg-bg-light rounded-2xl p-6 md:p-8 flex flex-col flex-shrink-0 w-[85vw] sm:w-[350px] md:w-[400px] snap-center border border-gray-100 hover-card">
+                    <div class="flex text-yellow-500 mb-2 text-xs md:text-sm"><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i></div>
+                    <h4 class="font-bold text-sm md:text-base text-primary mb-1">"Shiny Hair, Naturally!"</h4>
+                    <h5 class="font-bold text-xs md:text-sm mb-3 text-secondary">- Aditi Rao</h5>
+                    <p class="text-text-gray text-xs md:text-sm leading-relaxed italic">
+                        "I went in for a basic hair spa and was blown away by the aloe vera and fermented rice water
+                        treatment. My hair looks like it belongs in a shampoo commercial! No frizz, no weight, just
+                        pure, healthy shine."
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── LOCATIONS ─── -->
+    <section id="locations" class="py-12 md:py-20 bg-bg-light border-b border-gray-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-10">
+                <span class="text-primary font-bold tracking-widest text-xs mb-2 uppercase block">Our Presence</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-secondary font-serif">Visit Our Clinics</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover-card border border-gray-100 text-center">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Bhuvaneshwar</h3>
+                    <p class="text-xs text-text-gray mb-4">Premium clinic with state-of-the-art facilities.</p>
+                    <a href="tel:+919556747951" class="btn-black w-full py-2.5 text-xs">Call +91 95567 47951</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover-card border border-gray-100 text-center">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Vizag</h3>
+                    <p class="text-xs text-text-gray mb-4">Our flagship clinic serving with excellence.</p>
+                    <a href="tel:+919391082255" class="btn-black w-full py-2.5 text-xs">Call +91 93910 82255</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover-card border border-gray-100 text-center">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Rajahmundry</h3>
+                    <p class="text-xs text-text-gray mb-4">Trusted clinic serving with advanced care.</p>
+                    <a href="tel:+917337326992" class="btn-black w-full py-2.5 text-xs">Call +91 73373 26992</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover-card border border-gray-100 text-center">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Vijayawada</h3>
+                    <p class="text-xs text-text-gray mb-4">Offering comprehensive skin and hair treatments.</p>
+                    <a href="tel:+917579999499" class="btn-black w-full py-2.5 text-xs">Call +91 75799 99499</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover-card border border-gray-100 text-center">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Guntur</h3>
+                    <p class="text-xs text-text-gray mb-4">Advanced clinic providing world-class treatments.</p>
+                    <a href="tel:+917032349259" class="btn-black w-full py-2.5 text-xs">Call +91 70323 49259</a>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm hover-card border border-gray-100 text-center">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Gachibowli</h3>
+                    <p class="text-xs text-text-gray mb-4">Premium clinic located in the IT hub.</p>
+                    <a href="tel:+918019416555" class="btn-black w-full py-2.5 text-xs">Call +91 80194 16555</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── CONTACT WIDGET ─── -->
+    <section id="contact" class="py-12 md:py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div
+                class="max-w-4xl mx-auto bg-white rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.06)] border border-gray-100 overflow-hidden flex flex-col md:flex-row">
+
+                <div class="md:w-5/12 p-8 md:p-10 bg-secondary text-white relative flex flex-col justify-center">
+                    <div class="relative z-10">
+                        <h2 class="text-2xl font-extrabold font-serif mb-3">Book Consultation</h2>
+                        <p class="mb-8 text-gray-300 text-sm">Take the first step. Fill the form and our experts will
+                            connect instantly.</p>
+
+                        <div class="space-y-5">
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">Call Us
+                                    Directly</p>
+                                <p class="text-lg font-bold"><i class="fas fa-phone-alt text-primary mr-2 text-sm"></i>
+                                    +91 93910 82255</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-gray-400 uppercase font-bold tracking-wider mb-1">Email
+                                    Support</p>
+                                <p class="text-sm font-bold"><i class="fas fa-envelope text-primary mr-2 text-sm"></i>
+                                    info@skinmedindia.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-7/12 p-8 md:p-10 bg-white flex flex-col justify-center">
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="input-label">Full Name</label>
+                                <input type="text" id="formName" class="input-field" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label class="input-label">Phone</label>
+                                <input type="tel" id="formPhone" class="input-field" placeholder="+91 00000 00000"
+                                    required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="input-label">Service</label>
+                            <select id="formService" class="input-field" required>
+                                <option value="" disabled selected hidden>Select treatment...</option>
+                                <option>Hair Transplantation</option>
+                                <option>PRP / GFC Therapy</option>
+                                <option>Laser Hair Removal</option>
+                                <option>Skin Rejuvenation</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="input-label">Message</label>
+                            <textarea id="formMessage" class="input-field h-20 resize-none"
+                                placeholder="Briefly describe concerns..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-black w-full py-3.5 mt-2 text-[13px]">
+                            CONNECT VIA WHATSAPP <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─── FOOTER ─── -->
+    <footer class="py-10 bg-bg-light border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div>
+                    <a href="#" class="text-xl font-black tracking-tight block mb-2">
+                        <span class="text-secondary">SKIN</span><span class="text-primary">MED</span>
+                    </a>
+                    <p class="text-xs text-text-gray font-medium">&copy; 2026 Skin Med Clinics. All Rights Reserved.</p>
+                </div>
+                <div class="flex gap-4">
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-secondary hover:bg-black hover:text-white transition"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-secondary hover:bg-black hover:text-white transition"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="#"
+                        class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-secondary hover:bg-black hover:text-white transition"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating -->
+    <a href="https://wa.me/919391082255" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const target = document.querySelector(targetId);
+                if (target) {
+                    const navHeight = document.getElementById('main-nav').offsetHeight;
+                    const targetTop = target.getBoundingClientRect().top + window.scrollY - navHeight;
+                    window.scrollTo({ top: targetTop, behavior: 'smooth' });
+                }
+                closeMobileMenu();
+            });
+        });
+
+        // Form Submit
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('formName').value;
+            const phone = document.getElementById('formPhone').value;
+            const service = document.getElementById('formService').value;
+            const message = document.getElementById('formMessage').value;
+            const waText = `*New Consultation Request*\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${service}\n*Message:* ${message}`;
+            window.open(`https://wa.me/919391082255?text=${encodeURIComponent(waText)}`, '_blank');
+            this.reset();
+        });
+
+        // Mobile Menu Logic
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            const icon = hamburgerBtn.querySelector('i');
+            if (mobileMenu.classList.contains('flex')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            mobileMenu.classList.remove('flex');
+            const icon = hamburgerBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+
+        function toggleReview(btn) {
+            const container = btn.parentElement;
+            const shortText = container.querySelector('.short-text');
+            const fullText = container.querySelector('.full-text');
+            if (fullText.classList.contains('hidden')) {
+                shortText.classList.add('hidden');
+                fullText.classList.remove('hidden');
+                btn.textContent = 'Read Less';
+            } else {
+                fullText.classList.add('hidden');
+                shortText.classList.remove('hidden');
+                btn.textContent = 'Read More';
+            }
+        }
+    </script>
+</body>
+
+</html>
