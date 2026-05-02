@@ -815,3 +815,66 @@ textarea.form-control {
     text-align: center;
   }
 }
+
+/* Testimonial Section Styles */
+#testimonials {
+  background-color: var(--cta);
+}
+
+.testimonial-track {
+  display: flex;
+  overflow-x: auto;
+  gap: 24px;
+  padding: 20px 0 40px;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.testimonial-track::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 380px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  color: #facc15;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+.testimonial-name {
+  font-weight: 800;
+  color: var(--secondary);
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 85vw;
+    padding: 30px;
+  }
+}
