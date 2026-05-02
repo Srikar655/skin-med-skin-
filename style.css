@@ -319,7 +319,7 @@ img {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: center 20%; /* Adjust to keep the face centered if image is landscape */
+  object-position: 75% 20%; /* Synced with reference.html for exact centering */
   border: 6px solid #fff;
   box-shadow: var(--shadow-md);
 }
