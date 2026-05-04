@@ -667,6 +667,15 @@ textarea.form-control {
   border-top: 1px solid #e2e8f0;
 }
 
+.footer-logo img {
+  height: 50px;
+  width: auto;
+}
+
+.footer-brand {
+  text-align: left;
+}
+
 .footer-content {
   display: flex;
   justify-content: space-between;
@@ -812,6 +821,10 @@ textarea.form-control {
   .footer-content {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
+  }
+
+  .footer-brand {
     text-align: center;
   }
 }
