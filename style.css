@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --primary: #1E3A8A;
-  /* Darkish Blue */
-  --primary-hover: #172554;
-  --cta: #10B981;
-  /* Medical Green */
-  --cta-hover: #059669;
+  --primary: #F97316;
+  /* Vibrant Orange */
+  --primary-hover: #EA580C;
+  /* Darker Orange */
+  --cta: #F97316;
+  /* Vibrant Orange */
+  --cta-hover: #EA580C;
+  /* Darker Orange */
   --secondary: #0F172A;
   /* Deep Navy */
   --text-gray: #475569;
@@ -126,7 +128,7 @@ img {
   font-size: 0.8rem;
   margin-bottom: 12px;
   display: inline-block;
-  background: rgba(30, 58, 138, 0.08);
+  background: rgba(249, 115, 22, 0.1);
   padding: 6px 16px;
   border-radius: 50px;
 }
@@ -154,25 +156,25 @@ img {
 .btn-cta {
   background-color: var(--cta);
   color: white !important;
-  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
 }
 
 .btn-cta:hover {
   background-color: var(--cta-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 .btn-primary {
   background-color: var(--primary);
   color: white !important;
-  box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(30, 58, 138, 0.4);
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
 }
 
 .btn-outline {
@@ -468,7 +470,7 @@ img {
 
 /* Results Section */
 .results-section {
-  background: var(--secondary);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -517,6 +519,7 @@ img {
   font-size: 0.9rem;
   color: var(--text-gray);
   margin-bottom: 24px;
+  flex-grow: 1;
 }
 
 .location-card .btn {
@@ -613,7 +616,7 @@ img {
   outline: none;
   border-color: var(--primary);
   background: #fff;
-  box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+  box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.15);
 }
 
 textarea.form-control {
@@ -626,7 +629,7 @@ textarea.form-control {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background-color: #10B981;
+  background-color: #25D366;
   color: white;
   width: 65px;
   height: 65px;
@@ -635,7 +638,7 @@ textarea.form-control {
   align-items: center;
   justify-content: center;
   font-size: 36px;
-  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
   z-index: 1000;
   animation: pulse 2s infinite;
   transition: var(--transition);
@@ -648,15 +651,15 @@ textarea.form-control {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.5);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
   }
 
   70% {
-    box-shadow: 0 0 0 15px rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
 
@@ -831,7 +834,7 @@ textarea.form-control {
 
 /* Testimonial Section Styles */
 #testimonials {
-  background-color: var(--cta);
+  background-color: var(--bg-light);
 }
 
 .testimonial-track {
@@ -853,7 +856,7 @@ textarea.form-control {
   background: #fff;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
